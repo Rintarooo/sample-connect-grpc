@@ -15,3 +15,14 @@ buf-generate: ## Generate source code from proto files
 .PHONY: run-backend
 run-backend: ## Run backend locally
 	cd backend && go run cmd/serve/main.go
+
+.PHONY: curl-greet
+curl-greet: ## Curl greet (usage: make curl-greet NAME=XXX)
+	curl -X POST http://localhost:8080/greet.v1.GreetingService/GetGreeting \
+		-H "Content-Type: application/json" \
+		-d '{"name": "$(or $(NAME),YourName)"}'
+
+.PHONY: grpcurl-greet
+grpcurl-greet: ## Grpcurl greet (usage: make grpcurl-greet NAME=XXX)
+	grpcurl -plaintext -d '{"name": "$(or $(NAME),YourName)"}' \
+	  localhost:8080 greet.v1.GreetingService/GetGreeting
