@@ -1,0 +1,19 @@
+services:
+  buf-format:
+    image: sample-connect-grpc-buf-format
+    build:
+      context: .
+      dockerfile: ./docker/buf-generate/Dockerfile
+    volumes:
+      - .:/workspace
+    working_dir: /workspace/api/proto
+    command: buf format --diff -w
+  buf-generate:
+    image: sample-connect-grpc-buf-generate
+    build:
+      context: .
+      dockerfile: ./docker/buf-generate/Dockerfile
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: buf generate

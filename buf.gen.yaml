@@ -1,0 +1,17 @@
+version: v1
+plugins:
+  ### Go ###
+  - name: go
+    out: ./backend/internal/generated/grpc
+    opt: paths=source_relative
+  - name: connect-go
+    out: ./backend/internal/generated/grpc
+    opt:
+      - paths=source_relative
+  ### TypeScript ###
+  - name: es
+    out: ./frontend/src/generated/ts/grpc
+    opt: target=ts,import_extension=none
+  - name: connect-query
+    out: ./frontend/src/generated/ts/grpc
+    opt: target=ts,import_extension=none

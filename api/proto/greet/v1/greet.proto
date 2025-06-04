@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package greet.v1;
+
+option go_package = "github.com/Rintarooo/sample_connect_grpc/internal/generated/grpc/greet/v1;greetv1";
+
+service GreetingService {
+  rpc GetGreeting(GetGreetingRequest) returns (GetGreetingResponse);
+}
+
+message Greeting {
+  string id = 1;
+  string message = 2;
+}
+
+message GetGreetingRequest {
+  string name = 1;
+}
+
+message GetGreetingResponse {
+  Greeting greeting = 1;
+}
