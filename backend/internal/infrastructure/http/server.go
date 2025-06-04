@@ -12,6 +12,7 @@ import (
 
 	greetgrpc "github.com/Rintarooo/sample-connect-grpc/internal/component/greet/interface/grpc"
 	"github.com/Rintarooo/sample-connect-grpc/internal/generated/grpc/greet/v1/greetv1connect"
+	"github.com/Rintarooo/sample-connect-grpc/internal/infrastructure/middleware"
 )
 
 var server http.Server
@@ -35,8 +36,10 @@ func RunServer(logger *slog.Logger) error {
 	})
 
 	server = http.Server{
-		Addr:    ":8080",
-		Handler: h2c.NewHandler(mux, &http2.Server{}),
+		Addr: ":8080",
+		Handler: middleware.WithDefaultCORS()(
+			h2c.NewHandler(mux, &http2.Server{}),
+		),
 	}
 
 	return server.ListenAndServe()

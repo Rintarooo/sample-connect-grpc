@@ -20,6 +20,10 @@ run-frontend: ## Run frontend locally
 run-backend: ## Run backend locally
 	cd backend && go run cmd/serve/main.go
 
+.PHONY: go-mod-tidy
+go-mod-tidy: ## Run go mod tidy
+	cd backend && go mod tidy
+
 .PHONY: curl-greet
 curl-greet: ## Curl greet (usage: make curl-greet NAME=XXX)
 	curl -X POST http://localhost:8080/greet.v1.GreetingService/GetGreeting \
