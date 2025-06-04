@@ -22,6 +22,6 @@
 - Connect (HTTP/1.1, HTTP/2 compatible gRPC alternative)
 
 #### Code Generation
-- Buf
+- Buf CLI
   - Go: connect-go
   - TypeScript: connect-query
