@@ -1,6 +1,9 @@
 # Sample Connect/gRPC App
 
-## Overview
+<img width="554" alt="Image" src="https://github.com/user-attachments/assets/b7277734-419f-4af7-baab-61672189a4ce" />
+
+## Technology Stack
+
 
 ### Frontend
 - TypeScript
