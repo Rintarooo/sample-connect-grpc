@@ -163,6 +163,21 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.27.1"
 
+"@bufbuild/protobuf@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-2.5.1.tgz#b1afa0239b67004e4a5532eceac721484836fae5"
+  integrity sha512-lut4UTvKL8tqtend0UDu7R79/n9jA7Jtxf77RNPbxtmWqfWI4qQ9bTjf7KCS4vfqLmpQbuHr1ciqJumAgJODdw==
+
+"@connectrpc/connect-web@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@connectrpc/connect-web/-/connect-web-2.0.2.tgz#02f109e21eb06b31ee2558eeed39b1bf03cc9089"
+  integrity sha512-QANMFPiL2o66BdBEctg4TsQLe5ozsBLqcle3dCBp7BwGlNGTY6NnNnqmt+YRnpeMW88GgomJwWNMGCrRD9pRKA==
+
+"@connectrpc/connect@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@connectrpc/connect/-/connect-2.0.2.tgz#acd05e1408737c860e732137dc6f960321d2c628"
+  integrity sha512-xZuylIUNvNlH52e/4eQsZvY4QZyDJRtEFEDnn/yBrv5Xi5ZZI/p8X+GAHH35ucVaBvv9u7OzHZo8+tEh1EFTxA==
+
 "@esbuild/aix-ppc64@0.25.5":
   version "0.25.5"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.25.5.tgz#4e0f91776c2b340e75558f60552195f6fad09f18"
