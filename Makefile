@@ -11,3 +11,7 @@ buf-generate: ## Generate source code from proto files
 	rm -rf backend/internal/generated/grpc
 	rm -rf frontend/src/generated/ts/grpc/
 	docker compose run --rm buf-generate
+
+.PHONY: run-backend
+run-backend: ## Run backend locally
+	cd backend && go run cmd/serve/main.go
